@@ -5,15 +5,15 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
+        list = []
         for x in nums:
             if x >= target:
                 nums.remove(x)
-        for i in range(len(nums)-1):
-            j = 0
-            while j != (len(nums)-1):
-                if j == i:
-                    j += 1
+        for y in range(len(nums)-1):
+            for z in range(len(nums)-1):
+                if nums[z] == nums[y]:
                     continue
-                elif nums[i] + nums[j] == target:
-                    l = [i,j]
-                    return l
+                elif nums[y] + nums[z] == target:
+                   return [y,z]
+test_case = Solution()
+test_case([1,2,3,4,],3)

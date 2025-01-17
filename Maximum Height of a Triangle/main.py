@@ -8,7 +8,6 @@ class Solution(object):
         counter = 0
         red_add = 1
         blue_add = 1
-        
         red_c = 1
         blue_c = 0
         total_size = 0
